@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/js_118_stanislavNemch/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Preconnect для Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload критичных ресурсов -->
+  <link rel="preload" href="/js_118_stanislavNemch/img/hero/hero-mob-1x.avif" as="image" media="(max-width: 767px)">
+  <link rel="preload" href="/js_118_stanislavNemch/img/hero/hero-tab-1x.avif" as="image" media="(min-width: 768px) and (max-width: 1439px)">
+  <link rel="preload" href="/js_118_stanislavNemch/img/hero/hero-desc-1x.avif" as="image" media="(min-width: 1440px)">
+
+  <!-- Preload критичного CSS -->
+
+  <title>Меблерія</title>
+  <script type="module" crossorigin src="/js_118_stanislavNemch/index-GA9hl2R0.js"></script>
+  <link rel="modulepreload" crossorigin href="/js_118_stanislavNemch/api-CGQni89X.js">
+  <link rel="modulepreload" crossorigin href="/js_118_stanislavNemch/accordion-n9T1KWKK.js">
+  <link rel="modulepreload" crossorigin href="/js_118_stanislavNemch/toast-CnhFlkt1.js">
+  <link rel="modulepreload" crossorigin href="/js_118_stanislavNemch/swiper-BdJhUY6v.js">
+  <link rel="stylesheet" crossorigin href="/js_118_stanislavNemch/css/accordion-BfPs2Zf6.css">
+  <link rel="stylesheet" crossorigin href="/js_118_stanislavNemch/css/toast-CY6Op0Vx.css">
+  <link rel="stylesheet" crossorigin href="/js_118_stanislavNemch/css/swiper-CEtqwfEi.css">
+  <link rel="stylesheet" crossorigin href="/js_118_stanislavNemch/css/index-DLna3s-i.css">
+  <link rel="stylesheet" crossorigin href="/js_118_stanislavNemch/css/rating-Bk9U-Qg7.css">
+</head>
+
+<body>
+  <header>
+    <section class="navbar">
+    <div class="container nav-container">
+        <a href="./index.html" class="logo-link">
+            <svg class="company-icon" width="159" height="35" aria-label="Логотип компанії">
+                <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#company-logo"></use>
+            </svg>
+        </a>
+
+        <nav class="desktop-nav">
+            <ul class="nav-list">
+                <li><a href="#furniture" class="nav-link">Наші меблі</a></li>
+                <li><a href="#about" class="nav-link">Про нас</a></li>
+                <li><a href="#faq" class="nav-link">Часті питання</a></li>
+                <li><a href="#reviews" class="nav-link">Відгуки</a></li>
+            </ul>
+        </nav>
+
+        <a href="#furniture" class="desktop-order-btn">До покупок</a>
+
+        <button type="button" class="burger-menu-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="burger-icon" width="28" height="28" aria-label="Перемикач мобільного меню">
+                <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#icon-burger"></use>
+            </svg>
+        </button>
+
+        <div class="mobile-menu-container js-menu-container" id="mobile-menu">
+            <div class="container mobile-menu-content">
+                <nav>
+                    <ul class="mobile-menu-list">
+                        <li><a href="#furniture" class="nav-link">Наші меблі</a></li>
+                        <li><a href="#about" class="nav-link">Про нас</a></li>
+                        <li><a href="#faq" class="nav-link">Часті питання</a></li>
+                        <li><a href="#reviews" class="nav-link">Відгуки</a></li>
+                    </ul>
+                </nav>
+                <a href="#furniture" class="mobile-order-btn">До покупок</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+  </header>
+
+  <main>
+    <section class="hero">
+  <div class="container">
+    <div class="hero-container">
+      <h1 class="hero-title">Створіть свій ідеальний дім</h1>
+      <p class="text-hero">
+        Відкрийте для себе колекцію стильних та комфортних меблів, які
+        перетворять ваш простір. Наша продукція поєднує в собі елегантність та
+        функціональність.
+      </p>
+      <a href="#reviews" class="hero-btn">Що про нас думають</a>
+    </div>
+  </div>
+</section>
+
+    <section class="3-product three-product" id="furniture">
+  <div class="container">
+    <h2 class="product-title">Наші меблі</h2>
+    <p class="product-descr">Знайдіть ідеальні рішення для вашого інтер'єру</p>
+    <ul class="product-categories-list"></ul>
+
+    <div class="container-list">
+      <span class="loader"></span>
+    </div>
+    <ul class="products-list"></ul>
+
+    <div class="pagination-container">
+      <div class="pagination"></div>
+    </div>
+    <button class="btn-loadMore hiden">Показати ще</button>
+  </div>
+</section>
+
+    <section class="about-us" id="about">
+    <div class="container about-main-wrap">
+        <div class="about-wrap">
+            <h2 class="about-us-title">Про Меблерію</h2>
+            <p class="about-us-text">У Меблерії ми прагнемо створювати затишок та функціональність у кожному домі. Наша
+                місія - пропонувати високоякісні
+                меблі, що поєднують у собі сучасний дизайн, довговічність та доступність. Ми віримо, що ідеальний
+                інтер'єр починається з
+                правильних меблів.</p>
+        </div>
+
+        <picture class="about-img-wrap">
+            <source srcset="/js_118_stanislavNemch/assets/about-mob-min-BsDnZqki.webp 1x, /js_118_stanislavNemch/assets/about-mob@2x-min-BEvk_nzV.webp 2x"
+                media="(max-width:767px)" />
+            <source srcset="/js_118_stanislavNemch/assets/about-tab-min-DSZHcBEe.webp 1x, /js_118_stanislavNemch/assets/about-tab@2x-min-B5wHDpiJ.webp 2x"
+                media="(min-width:768px)" />
+            <source srcset="/js_118_stanislavNemch/assets/about-desk-min-BXbhatB0.webp 1x, /js_118_stanislavNemch/assets/about-desk@2x-min-BbGOu-5g.webp 2x"
+                media="(min-width:1440px)" />
+            <img srcset="/js_118_stanislavNemch/assets/about-desk-min-BXbhatB0.webp 1x, /js_118_stanislavNemch/assets/about-desk@2x-min-BbGOu-5g.webp 2x"
+                src="/js_118_stanislavNemch/assets/about-desk-min-BXbhatB0.webp" alt="Group of smiling people" class="img-about"
+                loading="lazy" />
+        </picture>
+
+    </div>
+</section>
+    <section class="popular-products">
+    <div class="container">
+        <h2 class="popular-products-title">Популярні товари</h2>
+
+        <!-- Swiper контейнер -->
+        <div class="swiper popular-products-swiper">
+            <div class="swiper-wrapper">
+                <!-- Слайды будут добавляться динамически -->
+            </div>
+        </div>
+
+        <!-- Навигация снизу -->
+        <div class="popular-products-controls">
+            <!-- Пагинация точками слева -->
+            <div class="popular-products-pagination swiper-pagination"></div>
+
+            <!-- Кнопки навигации справа -->
+            <div class="popular-products-navigation">
+                <button class="popular-products-btn-prev swiper-button-prev" type="button">
+                    <svg class="popular-products-icon" width="24" height="24">
+                        <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#left-arrow-alt"></use>
+                    </svg>
+                </button>
+
+                <button class="popular-products-btn-next swiper-button-next" type="button">
+                    <svg class="popular-products-icon" width="24" height="24">
+                        <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#right-arrow-alt"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Лоадер -->
+        <div class="popular-products-loader">
+            <div class="loader"></div>
+        </div>
+    </div>
+</section>
+    <section class="5-faq" id="faq">
+  <div class="container faq-container">
+    <h2 class="faq-title">Часті питання</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <h3 class="faq-question top-border">
+          Як здійснюється доставка меблів?
+          <svg class="arrow" width="24" height="24" aria-hidden="true">
+            <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#chevron-down"></use>
+          </svg>
+        </h3>
+        <p class="faq-answer">
+          Ми доставляємо замовлення по всій Україні через надійні служби. Термін
+          доставки зазвичай складає 3–7 днів залежно від регіону.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <h3 class="faq-question">
+          Чи є можливість вибрати колір або матеріал?
+          <svg class="arrow" width="24" height="24" aria-hidden="true">
+            <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#chevron-down"></use>
+          </svg>
+        </h3>
+        <p class="faq-answer">
+          Так, у багатьох моделях доступні варіанти оббивки та кольорів. Усі
+          доступні опції вказані на сторінці товару.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <h3 class="faq-question">
+          Чи можна повернути товар, якщо він не підійшов?
+          <svg class="arrow" width="24" height="24" aria-hidden="true">
+            <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#chevron-down"></use>
+          </svg>
+        </h3>
+        <p class="faq-answer">
+          Так, ви можете повернути товар протягом 14 днів, якщо він не був у
+          користуванні та збережений у первинному вигляді.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <h3 class="faq-question">
+          Чи надаєте ви послугу збирання меблів?
+          <svg class="arrow" width="24" height="24" aria-hidden="true">
+            <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#chevron-down"></use>
+          </svg>
+        </h3>
+        <p class="faq-answer">
+          Так, під час оформлення замовлення можна обрати послугу збирання. Наші
+          майстри зберуть меблі у зручний для вас час.
+        </p>
+      </li>
+
+      <li class="faq-item">
+        <h3 class="faq-question">
+          Як здійснити оплату?
+          <svg class="arrow" width="24" height="24" aria-hidden="true">
+            <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#chevron-down"></use>
+          </svg>
+        </h3>
+        <p class="faq-answer">
+          Ми приймаємо оплату карткою онлайн, банківським переказом або
+          післяплатою при отриманні.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="reviews" id="reviews">
+    <div class="container">
+        <h2 class="reviews-heading">Відгуки клієнтів</h2>
+        <p class="revies-section-text">Дізнайтеся, що кажуть наші задоволені клієнти про нашу меблі.</p>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Слайди тут -->
+            </div>
+        </div>
+
+        <!-- Контролы снизу как в popular-products -->
+        <div class="reviews-controls">
+            <!-- Пагинация слева -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Навигация справа -->
+            <ul class="reviews-navigation">
+                <li class="swiper-button-prev">
+                    <svg class="swiper-button-icon" width="24" height="24">
+                        <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#left-arrow-alt" />
+                    </svg>
+                </li>
+                <li class="swiper-button-next">
+                    <svg class="swiper-button-icon" width="24" height="24">
+                        <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#right-arrow-alt" />
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+  </main>
+
+  <footer>
+    <section class="footer" id="footer">
+    <div class="container">
+
+        <!-- Писати свій код в цьому контейнері -->
+        <div class="screen-footer">
+            <div class="logo-footer">
+            <a class="logo-footer-link" href="./index.html">
+            <svg class="logo-footer-icon" width="159" height="35" aria-label="Логотип компанії">
+                <use class="logo-footer-icon-style" href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#company-logo-footer"></use></svg></a>
+        </div>
+        <ul class="nav-footer">
+            <li><a href="#furniture">Наші меблі</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#faq">Часті питання</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+        </ul>
+        <ul class="social-list">
+            <li>
+                <a class="social-icon-link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/">
+                    <svg class="social-icon" width="24" height="24">
+                        <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#youtube"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social-icon-link" target="_blank" rel="noopener noreferrer"  href="https://www.instagram.com/">
+                    <svg class="social-icon instagram" width="24" height="24">
+                        <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="social-icon-link" target="_blank" rel="noopener noreferrer"  href="https://www.youtube.com/">
+                <svg class="social-icon" width="24" height="24">
+                    <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#facebook"></use>
+                </svg>
+            </a>
+        </li>
+        </ul>
+        <p class="copyright">&copy; 2025 Relume. Всі права захищені</p>
+        </div>
+
+    </div>
+</section>
+  </footer>
+
+  <div class="modal-window visuallyhidden modalBlur">
+  <div class="container"></div>
+</div>
+
+  <div class="backdrop visuallyhidden" id="order-backdrop">
+  <div class="container">
+    <div class="modal order-modal">
+      <button type="button" class="close-btn" data-modal-close>
+        <svg class="close-icon" width="14" height="14">
+          <!-- <use href="./images/icons.svg#icon-close"></use> -->
+          <use href="/js_118_stanislavNemch/images/sprite-CTbW2Ani.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <h2 class="modal-title">
+        Замовити зворотний <br />
+        зв’язок
+      </h2>
+
+      <form class="order-form">
+        <label class="form-field">
+          <span class="label-text">E-mail*</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="example@example.com"
+            class="form-input"
+            required
+          />
+        </label>
+
+        <label class="form-field">
+          <span class="label-text">Телефон*</span>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="+38 (099) 123 22 11"
+            class="form-input"
+            required
+          />
+        </label>
+
+        <label class="form-field comment-field">
+          <span class="label-text">Коментар</span>
+          <textarea
+            name="comment"
+            placeholder="Type your message..."
+            class="form-input comment-input"
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit" class="submit-btn">Надіслати заявку</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
